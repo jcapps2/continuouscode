@@ -86,19 +86,13 @@ const Links = ({
     popular.map((link, index) => {
       return (
         <div key={index} className="row alert alert-secondary p-2">
-          <div className="col-md-8" onClick={() => handleClick(link._id)}>
+          <div className="col-md-12" onClick={() => handleClick(link._id)}>
             <a href={link.url} target="_blank">
               <h5 className="pt-2">{link.title}</h5>
               <h6 className="pt-2 text-danger" style={{ fontSize: "12px" }}>
                 {link.url}
               </h6>
             </a>
-          </div>
-
-          <div className="col-md-4 pt-2">
-            <span className="pull-right">
-              {moment(link.createdAt).fromNow()} by {link.postedBy.name}
-            </span>
           </div>
 
           <div className="col-md-12">
